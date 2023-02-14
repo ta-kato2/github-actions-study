@@ -25,4 +25,4 @@ jobs:
 
       - name: build gradle
         working-directory: ./quarkus-app
-        run: ./gradlew clean build --parallel --max-workers=4 configureondemand=true jvmargs="-XX:+UseContainerSupport -XX:MaxRAMPercentage=80"
+        run: ./gradlew clean build --parallel --max-workers=4 jvmargs="-XX:+UseContainerSupport -XX:MaxRAMPercentage=80"
