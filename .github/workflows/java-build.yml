@@ -16,4 +16,5 @@ jobs:
           distribution: 'temurin'
       
       - name: Execute Gradle build
+        working-directory: ./quarkus-app
         run: ./gradlew build
