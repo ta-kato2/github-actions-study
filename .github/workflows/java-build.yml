@@ -15,10 +15,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: status gradle
-        working-directory: ./quarkus-app
-        run: ./gradlew --status
-      
       - name: clean gradle
         working-directory: ./quarkus-app
         run: ./gradlew --stop
