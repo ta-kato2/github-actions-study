@@ -19,10 +19,8 @@ jobs:
         working-directory: ./quarkus-app
         run: ./gradlew --stop
 
-      - name: export gradle option
-        working-directory: ./quarkus-app
-        run: export GRADLE_OPTS="-Dorg.gradle.daemon=false -XX:+UseContainerSupport -XX:MaxRAMPercentage=80"
-
       - name: build gradle
         working-directory: ./quarkus-app
         run: ./gradlew clean build -x test -info
+        env:
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false"
