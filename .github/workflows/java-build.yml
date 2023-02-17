@@ -19,4 +19,4 @@ jobs:
         working-directory: ./quarkus-app
         run: ./gradlew clean build -x test -info
         env:
-          GRADLE_OPTS: "-Dorg.gradle.daemon=false -XX:+UseContainerSupport"
+          GRADLE_OPTS: "-Dorg.gradle.daemon=false -XX:+UseContainerSupport -XX:MaxRAMPercentage=80"
